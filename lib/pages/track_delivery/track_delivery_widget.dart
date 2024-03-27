@@ -1,7 +1,5 @@
-import '/flutter_flow/flutter_flow_static_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:mapbox_search/mapbox_search.dart' as mapbox;
 import 'package:flutter/material.dart';
 import 'track_delivery_model.dart';
 export 'track_delivery_model.dart';
@@ -101,23 +99,6 @@ class _TrackDeliveryWidgetState extends State<TrackDeliveryWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const FlutterFlowStaticMap(
-                                    location: LatLng(9.341465, -79.891704),
-                                    apiKey: 'ENTER_YOUR_MAPBOX_API_KEY_HERE',
-                                    style: mapbox.MapBoxStyle.Light,
-                                    width: 300.0,
-                                    height: 150.0,
-                                    fit: BoxFit.cover,
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(0.0),
-                                      bottomRight: Radius.circular(0.0),
-                                      topLeft: Radius.circular(0.0),
-                                      topRight: Radius.circular(0.0),
-                                    ),
-                                    zoom: 12,
-                                    tilt: 0,
-                                    rotation: 0,
-                                  ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 12.0, 0.0),

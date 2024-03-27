@@ -1,11 +1,9 @@
 import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_charts.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/components/menu/menu_widget.dart';
 import '/pages/components/side_nav/side_nav_widget.dart';
-import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -855,97 +853,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.0, -1.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    16.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        child: SizedBox(
-                                                          width:
-                                                              double.infinity,
-                                                          height: 300.0,
-                                                          child:
-                                                              FlutterFlowBarChart(
-                                                            barData: [
-                                                              FFBarChartData(
-                                                                yData: List.generate(
-                                                                    random_data
-                                                                        .randomInteger(
-                                                                            0,
-                                                                            0),
-                                                                    (index) => random_data
-                                                                        .randomDouble(
-                                                                            0.0,
-                                                                            1.0)),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .accent1,
-                                                                borderWidth:
-                                                                    1.0,
-                                                                borderColor:
-                                                                    FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .accent1,
-                                                              )
-                                                            ],
-                                                            xLabels:
-                                                                List.generate(
-                                                                    random_data
-                                                                        .randomInteger(
-                                                                            0,
-                                                                            0),
-                                                                    (index) =>
-                                                                        random_data
-                                                                            .randomString(
-                                                                          0,
-                                                                          0,
-                                                                          true,
-                                                                          false,
-                                                                          false,
-                                                                        )),
-                                                            barWidth: 40.0,
-                                                            barBorderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        24.0),
-                                                            groupSpace: 90.0,
-                                                            alignment:
-                                                                BarChartAlignment
-                                                                    .spaceAround,
-                                                            chartStylingInfo:
-                                                                ChartStylingInfo(
-                                                              backgroundColor:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .tertiary,
-                                                              showBorder: false,
-                                                            ),
-                                                            axisBounds:
-                                                                const AxisBounds(),
-                                                            xAxisLabelInfo:
-                                                                const AxisLabelInfo(),
-                                                            yAxisLabelInfo:
-                                                                AxisLabelInfo(
-                                                              title:
-                                                                  'Amount of deliveries',
-                                                              titleTextStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodySmall,
-                                                              showLabels: true,
-                                                              labelTextStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodySmall,
-                                                              labelInterval:
-                                                                  20.0,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
                                                     ),
                                                   ),
                                                 ),
