@@ -1,3 +1,4 @@
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -331,7 +332,20 @@ class _AddProductBottomSheetWidgetState
                                               ''))
                                   ? null
                                   : () async {
-                                      setState(() {});
+                                      setState(() {
+                                        FFAppState()
+                                            .addToBolProducts(BolProductStruct(
+                                          productTitle: _model
+                                              .titleTextFieldController.text,
+                                          quantity: int.tryParse(_model
+                                              .quantityTextFieldController
+                                              .text),
+                                          weight: double.tryParse(_model
+                                              .weightTextFieldController.text),
+                                          message:
+                                              _model.shortMsgTFController.text,
+                                        ));
+                                      });
                                       var confirmDialogResponse =
                                           await showDialog<bool>(
                                                 context: context,

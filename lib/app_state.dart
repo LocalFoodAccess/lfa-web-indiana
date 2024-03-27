@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/backend/schema/structs/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FFAppState extends ChangeNotifier {
@@ -130,6 +131,35 @@ class FFAppState extends ChangeNotifier {
   String get productPhoto => _productPhoto;
   set productPhoto(String value) {
     _productPhoto = value;
+  }
+
+  List<BolProductStruct> _bolProducts = [];
+  List<BolProductStruct> get bolProducts => _bolProducts;
+  set bolProducts(List<BolProductStruct> value) {
+    _bolProducts = value;
+  }
+
+  void addToBolProducts(BolProductStruct value) {
+    _bolProducts.add(value);
+  }
+
+  void removeFromBolProducts(BolProductStruct value) {
+    _bolProducts.remove(value);
+  }
+
+  void removeAtIndexFromBolProducts(int index) {
+    _bolProducts.removeAt(index);
+  }
+
+  void updateBolProductsAtIndex(
+    int index,
+    BolProductStruct Function(BolProductStruct) updateFn,
+  ) {
+    _bolProducts[index] = updateFn(_bolProducts[index]);
+  }
+
+  void insertAtIndexInBolProducts(int index, BolProductStruct value) {
+    _bolProducts.insert(index, value);
   }
 }
 

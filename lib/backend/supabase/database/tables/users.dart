@@ -31,4 +31,7 @@ class UsersRow extends SupabaseDataRow {
 
   String? get businessName => getField<String>('business_name');
   set businessName(String? value) => setField<String>('business_name', value);
+
+  String? get photoUrl => getField<String>('photo_url');
+  set photoUrl(String? value) => setField<String>('photo_url', value);
 }

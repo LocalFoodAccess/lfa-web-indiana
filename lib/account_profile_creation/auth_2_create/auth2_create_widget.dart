@@ -378,8 +378,7 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                               .validate()) {
                                         return;
                                       }
-                                      GoRouter.of(context)
-                                          .prepareAuthEvent(true);
+                                      GoRouter.of(context).prepareAuthEvent();
 
                                       final user = await authManager
                                           .createAccountWithEmail(
@@ -395,13 +394,13 @@ class _Auth2CreateWidgetState extends State<Auth2CreateWidget>
                                         'user_id': currentUserUid,
                                         'email': currentUserEmail,
                                         'has_admin_access': false,
+                                        'photo_url':
+                                            'https://diqkwxzcspfoijdshesk.supabase.co/storage/v1/object/public/images/default_profile_pic.png',
                                       });
 
-                                      context.pushNamedAuth(
-                                        'SignUpQuestions_ContactInfo',
-                                        context.mounted,
-                                        ignoreRedirect: true,
-                                      );
+                                      context.goNamedAuth(
+                                          'SignUpQuestions_ContactInfo',
+                                          context.mounted);
                                     },
                                     text: 'Create Account',
                                     options: FFButtonOptions(

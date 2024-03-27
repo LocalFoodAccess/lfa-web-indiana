@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'sign_up_questions_complete_model.dart';
 export 'sign_up_questions_complete_model.dart';
@@ -73,7 +74,7 @@ class _SignUpQuestionsCompleteWidgetState
                                   Expanded(
                                     flex: 1,
                                     child: Text(
-                                      'Welcome to the \nLocal Food Directory',
+                                      'Welcome to the \nLocal Food Access \nDirectory',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .displayMedium,
@@ -98,7 +99,7 @@ class _SignUpQuestionsCompleteWidgetState
                                               padding: const EdgeInsets.all(30.0),
                                               child: Text(
                                                 'Thank you for completing our intake questionnaire! Your responses are invaluable in helping us tailor our services to meet your specific needs. We\'re now processing your information and will be in touch shortly with the next steps. If you have any questions or need further assistance in the meantime, please don\'t hesitate to reach out. We\'re here to support you every step of the way. \n\nWelcome aboard, and we look forward to working together!',
-                                                textAlign: TextAlign.start,
+                                                textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -128,85 +129,93 @@ class _SignUpQuestionsCompleteWidgetState
                                               MainAxisAlignment.spaceEvenly,
                                           children: [
                                             Expanded(
-                                              child: FFButtonWidget(
-                                                onPressed: () async {
-                                                  context.safePop();
-                                                },
-                                                text: 'Back',
-                                                options: FFButtonOptions(
-                                                  width: double.infinity,
-                                                  height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          24.0, 0.0, 24.0, 0.0),
-                                                  iconPadding:
-                                                      const EdgeInsetsDirectional
-                                                          .fromSTEB(0.0, 0.0,
-                                                              0.0, 0.0),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .accent3,
-                                                  textStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .titleSmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                      ),
-                                                  elevation: 3.0,
-                                                  borderSide: const BorderSide(
-                                                    color: Colors.transparent,
-                                                    width: 1.0,
+                                              child: Opacity(
+                                                opacity: 0.0,
+                                                child: FFButtonWidget(
+                                                  onPressed: () async {
+                                                    context.safePop();
+                                                  },
+                                                  text: 'Back',
+                                                  options: FFButtonOptions(
+                                                    width: double.infinity,
+                                                    height: 40.0,
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(24.0, 0.0,
+                                                                24.0, 0.0),
+                                                    iconPadding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 0.0),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .accent3,
+                                                    textStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary,
+                                                            ),
+                                                    elevation: 3.0,
+                                                    borderSide: const BorderSide(
+                                                      color: Colors.transparent,
+                                                      width: 1.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            24.0),
                                                   ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          24.0),
                                                 ),
                                               ),
                                             ),
                                             Expanded(
-                                              child: FFButtonWidget(
-                                                onPressed: () async {
-                                                  context.pushNamed(
-                                                      'userHomePage');
-                                                },
-                                                text: 'Done',
-                                                options: FFButtonOptions(
-                                                  width: double.infinity,
-                                                  height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          24.0, 0.0, 24.0, 0.0),
-                                                  iconPadding:
-                                                      const EdgeInsetsDirectional
-                                                          .fromSTEB(0.0, 0.0,
-                                                              0.0, 0.0),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .accent1,
-                                                  textStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .titleSmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                      ),
-                                                  elevation: 3.0,
-                                                  borderSide: const BorderSide(
-                                                    color: Colors.transparent,
-                                                    width: 1.0,
+                                              child: Opacity(
+                                                opacity: 0.0,
+                                                child: FFButtonWidget(
+                                                  onPressed: () async {
+                                                    context.pushNamed(
+                                                        'userHomePage');
+                                                  },
+                                                  text: 'Done',
+                                                  options: FFButtonOptions(
+                                                    width: double.infinity,
+                                                    height: 40.0,
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(24.0, 0.0,
+                                                                24.0, 0.0),
+                                                    iconPadding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 0.0),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .accent1,
+                                                    textStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primaryText,
+                                                            ),
+                                                    elevation: 3.0,
+                                                    borderSide: const BorderSide(
+                                                      color: Colors.transparent,
+                                                      width: 1.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            24.0),
                                                   ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          24.0),
                                                 ),
                                               ),
                                             ),
@@ -233,43 +242,36 @@ class _SignUpQuestionsCompleteWidgetState
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Align(
-                                  alignment: const AlignmentDirectional(-1.0, -1.0),
-                                  child: Container(
-                                    width: 100.0,
-                                    height: 1200.0,
-                                    constraints: BoxConstraints(
-                                      minWidth:
-                                          MediaQuery.sizeOf(context).width *
-                                              1.0,
-                                      minHeight:
-                                          MediaQuery.sizeOf(context).height *
-                                              1.0,
-                                      maxWidth:
-                                          MediaQuery.sizeOf(context).width *
-                                              1.0,
-                                      maxHeight: 1500.0,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image: Image.network(
-                                          'https://diqkwxzcspfoijdshesk.supabase.co/storage/v1/object/public/images/lfa-complete-bg.jpg',
-                                        ).image,
+                                Container(
+                                  width: 100.0,
+                                  height: 1200.0,
+                                  constraints: BoxConstraints(
+                                    minWidth:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    minHeight:
+                                        MediaQuery.sizeOf(context).height * 1.0,
+                                    maxWidth:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    maxHeight: 1500.0,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    image: const DecorationImage(
+                                      fit: BoxFit.cover,
+                                      alignment: AlignmentDirectional(0.0, 1.0),
+                                      image: CachedNetworkImageProvider(
+                                        'https://diqkwxzcspfoijdshesk.supabase.co/storage/v1/object/public/images/lfa-complete-bg.jpg',
                                       ),
                                     ),
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: const Align(
-                                      alignment:
-                                          AlignmentDirectional(-1.0, -1.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Spacer(),
-                                        ],
-                                      ),
+                                  ),
+                                  child: const Align(
+                                    alignment: AlignmentDirectional(-1.0, -1.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Spacer(),
+                                      ],
                                     ),
                                   ),
                                 ),
