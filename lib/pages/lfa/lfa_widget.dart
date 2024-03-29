@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'lfa_model.dart';
 export 'lfa_model.dart';
 
@@ -134,129 +135,210 @@ class _LfaWidgetState extends State<LfaWidget> {
                                                         .titleLarge
                                                         .override(
                                                           fontFamily: 'Outfit',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent2,
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
                                             ],
                                           ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Expanded(
-                                                flex: 1,
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'Optimized Logistics',
-                                                      textAlign:
-                                                          TextAlign.start,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      'Embrace a delivery system designed for efficiency. Our platform supports farmers and transporters in reducing delays, avoiding confusion, and ensuring that food reaches pantries promptly.',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ].divide(const SizedBox(
-                                                      height: 12.0)),
+                                          Align(
+                                            alignment:
+                                                const AlignmentDirectional(
+                                                    0.0, -1.0),
+                                            child: Wrap(
+                                              spacing: 30.0,
+                                              runSpacing: 30.0,
+                                              alignment: WrapAlignment.start,
+                                              crossAxisAlignment:
+                                                  WrapCrossAlignment.start,
+                                              direction: Axis.horizontal,
+                                              runAlignment:
+                                                  WrapAlignment.center,
+                                              verticalDirection:
+                                                  VerticalDirection.down,
+                                              clipBehavior: Clip.none,
+                                              children: [
+                                                Container(
+                                                  constraints:
+                                                      const BoxConstraints(
+                                                    maxWidth: 250.0,
+                                                  ),
+                                                  decoration:
+                                                      const BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                -1.0, -1.0),
+                                                        child: FaIcon(
+                                                          FontAwesomeIcons
+                                                              .truck,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent2,
+                                                          size: 42.0,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'Optimized Logistics',
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .titleMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        'Our platform supports farmers and transporters in reducing delays, avoiding confusion, and ensuring that food reaches pantries promptly.',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                    ].divide(const SizedBox(
+                                                        height: 12.0)),
+                                                  ),
                                                 ),
-                                              ),
-                                              Expanded(
-                                                flex: 1,
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'Enhanced Sustainability',
-                                                      textAlign:
-                                                          TextAlign.start,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      'Embrace a delivery system designed for efficiency. Our platform supports farmers and transporters in reducing delays, avoiding confusion, and ensuring that food reaches pantries promptly.',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ].divide(const SizedBox(
-                                                      height: 12.0)),
+                                                Container(
+                                                  constraints:
+                                                      const BoxConstraints(
+                                                    maxWidth: 250.0,
+                                                  ),
+                                                  decoration:
+                                                      const BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                -1.0, -1.0),
+                                                        child: Icon(
+                                                          Icons
+                                                              .connect_without_contact_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent2,
+                                                          size: 48.0,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'Enhanced Sustainability',
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .titleMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        'Our platform supports farmers and transporters in reducing delays, avoiding confusion, and ensuring that food reaches pantries promptly.',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                    ].divide(const SizedBox(
+                                                        height: 12.0)),
+                                                  ),
                                                 ),
-                                              ),
-                                              Expanded(
-                                                flex: 1,
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'Increased Reliability',
-                                                      textAlign:
-                                                          TextAlign.start,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      'Embrace a delivery system designed for efficiency. Our platform supports farmers and transporters in reducing delays, avoiding confusion, and ensuring that food reaches pantries promptly.',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ].divide(const SizedBox(
-                                                      height: 12.0)),
+                                                Container(
+                                                  constraints:
+                                                      const BoxConstraints(
+                                                    maxWidth: 250.0,
+                                                  ),
+                                                  decoration:
+                                                      const BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                -1.0, -1.0),
+                                                        child: Icon(
+                                                          Icons
+                                                              .offline_bolt_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent2,
+                                                          size: 48.0,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'Increased Reliability',
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .titleMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        'Our streamlined process ensures that food pantries can depend on timely deliveries, and farmers can trust that their hard work is going directly to those in need.\n',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                    ].divide(const SizedBox(
+                                                        height: 12.0)),
+                                                  ),
                                                 ),
-                                              ),
-                                            ]
-                                                .divide(
-                                                    const SizedBox(width: 24.0))
-                                                .around(const SizedBox(
-                                                    width: 24.0)),
+                                              ],
+                                            ),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,

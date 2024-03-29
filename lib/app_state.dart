@@ -18,9 +18,6 @@ class FFAppState extends ChangeNotifier {
   Future initializePersistedState() async {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
-      _isFarmer = prefs.getBool('ff_isFarmer') ?? _isFarmer;
-    });
-    _safeInit(() {
       _bolSender = prefs.getString('ff_bolSender') ?? _bolSender;
     });
     _safeInit(() {
@@ -42,7 +39,6 @@ class FFAppState extends ChangeNotifier {
   bool get isFarmer => _isFarmer;
   set isFarmer(bool value) {
     _isFarmer = value;
-    prefs.setBool('ff_isFarmer', value);
   }
 
   String _bolStatus = '';

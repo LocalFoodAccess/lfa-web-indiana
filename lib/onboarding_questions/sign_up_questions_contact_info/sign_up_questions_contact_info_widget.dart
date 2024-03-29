@@ -1051,7 +1051,7 @@ class _SignUpQuestionsContactInfoWidgetState
                                                 fontFamily: 'Readex Pro',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryText,
+                                                        .secondaryText,
                                                 letterSpacing: 0.0,
                                               ),
                                       searchTextStyle:
@@ -1066,7 +1066,7 @@ class _SignUpQuestionsContactInfoWidgetState
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
+                                                .primaryText,
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'Select County',
@@ -1110,6 +1110,8 @@ class _SignUpQuestionsContactInfoWidgetState
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'Select Region',
@@ -1151,6 +1153,8 @@ class _SignUpQuestionsContactInfoWidgetState
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'Select Entity',
@@ -1174,9 +1178,22 @@ class _SignUpQuestionsContactInfoWidgetState
                                       isOverButton: true,
                                       isSearchable: false,
                                       isMultiSelect: true,
-                                      onMultiSelectChanged: (val) => setState(
-                                          () =>
-                                              _model.entityDropDownValue = val),
+                                      onMultiSelectChanged: (val) async {
+                                        setState(() =>
+                                            _model.entityDropDownValue = val);
+                                        if (_model.entityDropDownValue
+                                                ?.contains(FFAppConstants
+                                                    .checkFarmer) ==
+                                            true) {
+                                          setState(() {
+                                            FFAppState().isFarmer = true;
+                                          });
+                                        } else {
+                                          setState(() {
+                                            FFAppState().isFarmer = false;
+                                          });
+                                        }
+                                      },
                                     ),
                                   ),
                                   Padding(
@@ -1197,6 +1214,8 @@ class _SignUpQuestionsContactInfoWidgetState
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'Best Form of Contact',
@@ -1246,6 +1265,8 @@ class _SignUpQuestionsContactInfoWidgetState
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'Best Time of Day to Contact',
@@ -1656,27 +1677,6 @@ class _SignUpQuestionsContactInfoWidgetState
                                                       null) {
                                                     return;
                                                   }
-                                                  FFAppState().update(() {
-                                                    FFAppState().bolSender = _model
-                                                        .businessNameController
-                                                        .text;
-                                                  });
-                                                  if (_model.entityDropDownValue
-                                                          ?.contains(
-                                                              FFAppConstants
-                                                                  .checkFarmer) !=
-                                                      null) {
-                                                    setState(() {
-                                                      FFAppState().isFarmer =
-                                                          true;
-                                                    });
-                                                  } else {
-                                                    setState(() {
-                                                      FFAppState().isFarmer =
-                                                          false;
-                                                    });
-                                                  }
-
                                                   await ProfileTable().insert({
                                                     'phone_number': _model
                                                         .phoneNumberController
@@ -1721,6 +1721,11 @@ class _SignUpQuestionsContactInfoWidgetState
                                                     'email': currentUserEmail,
                                                     'entity': _model
                                                         .entityDropDownValue,
+                                                  });
+                                                  setState(() {
+                                                    FFAppState().bolSender = _model
+                                                        .businessNameController
+                                                        .text;
                                                   });
 
                                                   context.pushNamed(
